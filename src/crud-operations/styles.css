@@ -1,0 +1,144 @@
+/* These will be our styles */
+/* used: https://uigradients.com/#CoolBlues for background gradients */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+form {
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+form input,
+.modal-content input {
+  flex: 1;
+  outline: 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+form button,
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tasks {
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: start;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: space-between;
+}
+
+li button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 20px;
+  border-radius: 5px;
+  /* background: black; */
+}
+
+.edit-btn {
+  background: #10b981;
+}
+
+.delete-btn {
+  background: #b91c1c;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete-modal-btns {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.delete-modal-btns button {
+  width: 100%;
+}
