@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const editModal = document.getElementById("editModal");
   const deleteModal = document.getElementById("deleteModal");
   const closeEditModal = document.querySelector(".close");
-  const closeDeleteModal = document.querySelector(".close");
+  const closeDeleteModal = document.querySelector(".close-delete");
 
   const editTaskInput = document.getElementById("editTaskInput");
   const updateTaskButton = document.getElementById("updateTaskButton");
@@ -75,7 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
       editTaskInput.value = tasks[currentEditIndex];
       editModal.style.display = "flex";
     } else if (e.target.classList.contains("delete-btn")) {
-      deleteModal.style.display = "none";
+      currentDeleteIndex = e.target.getAttribute("data-index");
+      deleteModal.style.display = "flex";
     }
   });
 
@@ -96,5 +97,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   closeEditModal.addEventListener("click", () => {
     editModal.style.display = "none";
+  });
+
+  confirmDeleteButton.addEventListener("click", () => {
+    try {
+      if (currentDeleteIndex !== null) {
+        tasks.splice(currentDeleteIndex, 1);
+        saveTasks();
+        renderTasks();
+        deleteModal.style.display = "none";
+      }
+    } catch (error) {
+      console.log("Error deleting task:", error);
+    }
+  });
+
+  cancelDeleteButton.addEventListener("click", () => {
+    deleteModal.style.display = "none";
+  });
+
+  closeDeleteModal.addEventListener("click", () => {
+    deleteModal.style.display = "none";
   });
 });
