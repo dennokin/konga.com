@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Quiz questions and answers will be dynamically added here -->
+        <div id="quiz">
+            <div class="heading">
+                <h2 id="question">What is a map?</h2>
+                <button type="button" class="total-qtns">
+                    <span id="current-qtn" class="current-qtn">0</span>/<span id="total-qtns">10</span>
+                </button>
+            </div>
+                <ul>
+                    <li>
+                        <button class="option" data-answer="a">Option a</button>
+                    </li>
+                    <li>
+                        <button class="option" data-answer="b">Option b</button>
+                    </li>
+                    <li>
+                        <button class="option" data-answer="c">Option c</button>
+                    </li>
+                    <li>
+                        <button class="option" data-answer="d">Option d</button>
+                    </li>
+                </ul>
+            <button id="next-btn">Next Question</button>
+        </div>
+
+         <!-- Quiz completion will be dynamically added here -->
+        <div id="results" style="display:none;">
+            <h2>Your Score:
+                <span id="score">0</span>/10
+            </h2>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
