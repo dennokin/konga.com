@@ -98,7 +98,7 @@ function loadQuestion() {
   try {
     const currentQuizData = quizData[currentQuestion];
     questionEl.textContent = currentQuizData.question;
-    currentQuestionEl.textContent = currentQuestion;
+    currentQuestionEl.textContent = currentQuestion + 1;
     totalQuestions.textContent = quizData.length;
 
     optionsEls.forEach((option) => {
