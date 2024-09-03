@@ -1,23 +1,36 @@
 const products = [
   {
     id: 1,
-    title: "Product 1",
-    price: 9.99,
-    image: "https://via.placeholder.com/150",
+    title: "Wireless Earbuds",
+    price: 29.99,
+    image: "https://via.placeholder.com/150?text=Wireless+Earbuds",
   },
   {
     id: 2,
-    title: "Product 2",
-    price: 9.99,
-    image: "https://via.placeholder.com/150",
+    title: "Smartphone Case",
+    price: 15.99,
+    image: "https://via.placeholder.com/150?text=Smartphone+Case",
   },
   {
     id: 3,
-    title: "Product 3",
-    price: 9.99,
-    image: "https://via.placeholder.com/150",
+    title: "Bluetooth Speaker",
+    price: 49.99,
+    image: "https://via.placeholder.com/150?text=Bluetooth+Speaker",
+  },
+  {
+    id: 4,
+    title: "Fitness Tracker",
+    price: 79.99,
+    image: "https://via.placeholder.com/150?text=Fitness+Tracker",
+  },
+  {
+    id: 5,
+    title: "Laptop Stand",
+    price: 19.99,
+    image: "https://via.placeholder.com/150?text=Laptop+Stand",
   },
 ];
+
 
 async function fetchProducts() {
   const spinner = document.getElementById("spinner");
@@ -28,7 +41,7 @@ async function fetchProducts() {
   productList.style.display = "none";
 
   try {
-    const response = await fetch("https://fakestoreapi.com/products");
+    const response = await fetch("productss");
     // const products = [
     //   {
     //     id: 1,
